@@ -17,7 +17,7 @@ export async function fetchRevenue() {
     const client = await db.connect();
 
     // Remove artificial delay for now
-    // await new Promise((resolve) => setTimeout(resolve, 3000));
+    await new Promise((resolve) => setTimeout(resolve, 3000));
 
     const data = await client.sql<Revenue>`SELECT * FROM revenue`;
 
